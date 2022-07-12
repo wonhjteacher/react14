@@ -1,15 +1,15 @@
 import React from 'react';
 import "./ProductItem.css";
-const ProductItem = () => {
+const ProductItem = ({item}) => {
     return (
         <div className="product-item">
         <img
             className="item-image" 
             alt="product"
-            src={} 
+            src={item.product_img} 
          />
-        <div className="item-name" >{}</div>
-        <div className="item-price">{}원</div>
+        <div className="item-name" >{item.product_name}</div>
+        <div className="item-price">{item.price}원</div>
     </div>
     );
 };

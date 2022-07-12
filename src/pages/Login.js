@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const login = () => {
+const Login = ({setAuth}) => {
+    const navigate = useNavigate();
+    const login = (e) => {
+        e.preventDefault();
+        setAuth(true)
+        navigate('/')
+    } 
     return (
             <div>
-             <form>
+             <form onSubmit={(e)=>{login(e)}}>
                 <div>
                     <div><label htmlFor='userId'>아이디</label></div>
                     <div><input type="text" id="userId"  placeholder='Email aadress' /></div>
@@ -21,4 +28,4 @@ const login = () => {
  }
         
 
-export default login;
+export default Login;
