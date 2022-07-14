@@ -1,4 +1,4 @@
-.product-item-container{
+.product-list{
     display: flex;
     flex-wrap: wrap;
     width: 960px;
